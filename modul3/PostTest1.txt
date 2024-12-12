@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Desain Halaman Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="gambar">
+            <img src="gambar.jpeg" alt="Gambar Artikel">
+        </div>
+        <div class="konten">
+            <h2>Sepak Bola</h2>
+            <p> Sepak bola adalah cabang olahraga yang dimainkan antara dua tim yang
+			terdiri dari 11 pemain. Permainan ini melibatkan menggiring bola dengan 
+			kaki dan mencetak gol ke gawang lawan</p>
+            <a href="#">Baca Selengkapnya</a>
+        </div>
+    </div>
+</body>
+</html>

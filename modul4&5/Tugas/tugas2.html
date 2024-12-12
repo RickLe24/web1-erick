@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Tambah Data Kamar dan Fasilitas</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Tambah Data Kamar</h1>
+    <form id="formKamar">
+        <label for="nomorKamar">Nomor Kamar:</label>
+        <input type="text" id="nomorKamar" name="nomorKamar" required>
+        <span id="errorNomorKamar" class="error"></span>
+        <br>
+
+        <label for="tipeKamar">Tipe Kamar:</label>
+        <select id="tipeKamar" name="tipeKamar" required>
+            <option value="standar">Standar</option>
+            <option value="superior">Superior</option>
+            <option value="deluxe">Deluxe</option>
+        </select>
+        <br>
+
+        <label for="harga">Harga per Malam:</label>
+        <input type="number" id="harga" name="harga" required>
+        <span id="errorHarga" class="error"></span>
+        <br>
+
+        <label for="fasilitas">Fasilitas:</label>
+        <select id="fasilitas" name="fasilitas[]" multiple>
+            <option value="AC">AC</option>
+            <option value="WiFi">WiFi</option>
+            <option value="TV">TV</option>
+        </select>
+        <br>
+
+        <button type="submit">Tambah Kamar</button>
+    </form>
+
+    <script>
+        const formKamar = document.getElementById('formKamar');
+        const nomorKamarInput = document.getElementById('nomorKamar');
+        const hargaInput = document.getElementById('harga');
+        const errorNomorKamar = document.getElementById('errorNomorKamar');
+        const errorHarga = document.getElementById('errorHarga');
+
+        formKamar.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            // Reset pesan error
+            errorNomorKamar.textContent = '';
+            errorHarga.textContent = '';
+
+            // Validasi
+            let isValid = true;
+
+            if (!nomorKamarInput.value.trim()) {
+                errorNomorKamar.textContent = 'Nomor kamar harus diisi';
+                isValid = false;
+            } else if (isNaN(nomorKamarInput.value)) {
+                errorNomorKamar.textContent = 'Nomor kamar harus berupa angka';
+                isValid = false;
+            }
+
+            if (!hargaInput.value) {
+                errorHarga.textContent = 'Harga harus diisi';
+                isValid = false;
+            } else if (isNaN(hargaInput.value) || hargaInput.value <= 0) {
+                errorHarga.textContent = 'Harga harus berupa angka positif';
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Simulasi pengiriman data ke server
+                alert('Data kamar berhasil ditambahkan!');
+                // ... (kode untuk mengirim data ke server)
+            }
+        });
+    </script>
+</body>
+</html>

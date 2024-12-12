@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Pemesanan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3e8e41;
+    }
+
+    .data-kamar {
+      margin-top: 20px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+
+    .data-fasilitas {
+      margin-top: 20px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+
+    .data-kamar img,
+    .data-fasilitas img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Form Pemesanan</h1>
+
+  <form>
+    <label for="id-pemesanan">Id Pemesanan:</label>
+    <input type="text" id="id-pemesanan" value="1" disabled><br>
+
+    <label for="nama-pemesan">Nama Pemesan:</label>
+    <input type="text" id="nama-pemesan"><br>
+
+    <label for="nomor-identitas">Nomor Identitas:</label>
+    <input type="text" id="nomor-identitas"><br>
+
+    <label for="tipe-kamar">Tipe Kamar:</label>
+    <select id="tipe-kamar">
+      <option value="">--Pilih--</option>
+      <option value="standar">STANDAR</option>
+      <option value="deluxe">DELUXE</option>
+      <option value="family">FAMILY</option>
+    </select><br>
+
+    <label for="tanggal-pesan">Tanggal Pesan:</label>
+    <input type="date" id="tanggal-pesan"><br>
+
+    <label for="durasi">Durasi Menginap:</label>
+    <input type="number" id="durasi"> Hari<br>
+
+    <label for="breakfast">Termasuk Breakfast:</label>
+    <input type="checkbox" id="breakfast" value="ya"> Ya<br>
+
+    <label for="total-bayar">Total Bayar:</label>
+    <input type="text" id="total-bayar" disabled><br>
+
+    <div class="data-kamar">
+      <h2>Data Kamar</h2>
+      
+      <label for="id-kamar">ID Kamar:</label>
+      <input type="text" id="id-kamar"><br>
+      
+      <label for="gambar-ruangan">Gambar Ruangan:</label>
+      <input type="file" id="gambar-ruangan"><br>
+      
+      <label for="jenis-kamar">Jenis Kamar:</label>
+      <select id="jenis-kamar">
+        <option value="">--Pilih--</option>
+        <option value="standar">STANDAR</option>
+        <option value="deluxe">DELUXE</option>
+        <option value="family">FAMILY</option>
+      </select><br>
+      
+      <label for="harga">Harga:</label>
+      <input type="number" id="harga"><br>
+      
+      <label for="fasilitas">Fasilitas:</label>
+      <input type="text" id="fasilitas"><br>
+    </div>
+
+    <div class="data-fasilitas">
+      <h2>Data Fasilitas</h2>
+      
+      <label for="id-fasilitas">ID Fasilitas:</label>
+      <input type="text" id="id-fasilitas"><br>
+      
+      <label for="nama-fasilitas">Nama Fasilitas:</label>
+      <input type="text" id="nama-fasilitas"><br>
+      
+      <label for="harga-weekend">Harga Weekend:</label>
+      <input type="number" id="harga-weekend"><br>
+      
+      <label for="harga-weekday">Harga Weekday:</label>
+      <input type="number" id="harga-weekday"><br>
+      
+      <label for="kuota">Kuota:</label>
+      <input type="number" id="kuota"><br>
+      
+      <label for="jam-buka">Jam Buka:</label>
+      <input type="time" id="jam-buka"><br>
+      
+      <label for="jam-tutup">Jam Tutup:</label>
+      <input type="time" id="jam-tutup"><br>
+    </div>
+
+    <button type="submit">Simpan</button>
+    <button type="reset">Batal</button>
+  </form>
+</body>
+</html>
