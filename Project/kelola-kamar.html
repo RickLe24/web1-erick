@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kelola Jenis Kamar - Hotel Erick">
+    <title>Kelola Jenis Kamar - Hotel Erick</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Hotel Erick - Kelola Jenis Kamar</h1>
+            <nav>
+                <ul>
+                    <li><a href="admin-dashboard.html">Dashboard</a></li>
+                    <li><a href="kelola-kamar.html">Kelola Kamar</a></li>
+                    <li><a href="kelola-fasilitas.html">Kelola Fasilitas</a></li>
+                    <li><a href="kelola-pesanan.html">Kelola Pemesanan</a></li>
+                    <li><a href="index.html" class="logout-btn">Logout</a></li> <!-- Tombol Logout -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="manage-rooms">
+        <h2>Kelola Jenis Kamar</h2>
+        <div class="room-actions">
+            <button class="add-room-btn">Tambah Kamar</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Kamar</th>
+                    <th>Harga</th>
+                    <th>Deskripsi</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kamar Standar</td>
+                    <td>Rp 600.000</td>
+                    <td>Akomodasi dasar yang menawarkan kenyamanan dengan fasilitas yang cukup untuk para tamu.</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Hapus</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kamar Deluxe</td>
+                    <td>Rp 800.000</td>
+                    <td>Akomodasi yang menawarkan kenyamanan ekstra dan fasilitas lebih dibandingkan dengan kamar standar.</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Hapus</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kamar Suite</td>
+                    <td>Rp 1.500.000</td>
+                    <td>Akomodasi yang menawarkan kemewahan dan kenyamanan ekstra dengan ruang dan fasilitas yang lebih lengkap dibandingkan dengan kamar lainnya.</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Hapus</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hotel Erick</p>
+    </footer>
+</body>
+</html>
